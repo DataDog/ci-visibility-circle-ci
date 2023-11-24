@@ -102,7 +102,7 @@ class CircleCIClient:
 
         webhooks = data['items']
 
-        next_page_token = data.get('continuation_token')
+        next_page_token = data.get('next_page_token')
         if next_page_token:
             webhooks += self.list_webhooks(project_id, next_page_token)
 
